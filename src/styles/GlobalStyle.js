@@ -1,8 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import { BreakpointSizes, breakAt } from "./Breakpoints";
+import { Helmet } from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+  @import url("");
   
   html {
     font-family: "Ubuntu", sans-serif;
@@ -82,4 +83,16 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default GlobalStyle;
+const GlobalStyleComposed = () => (
+  <>
+    <GlobalStyle />
+    <Helmet>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
+  </>
+);
+
+export default GlobalStyleComposed;
