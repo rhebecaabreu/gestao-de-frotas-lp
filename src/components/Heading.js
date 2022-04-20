@@ -8,7 +8,7 @@ const Heading = styled.div`
   h5,
   h6 {
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -16,15 +16,15 @@ const Heading = styled.div`
       content: "";
       position: absolute;
       left: 0;
-      bottom: -4px;
-      background-color: #ffc107;
-      height: 6px;
+      bottom: -3px;
+      background-color: ${(props) => props.theme.colors.primary.main};
+      height: 5px;
       width: 70px;
     }
   }
 
   h1 {
-    padding-bottom: 24px;
+    padding-bottom: 25px;
   }
 `;
 

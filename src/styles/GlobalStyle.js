@@ -1,10 +1,10 @@
+import React from "react";
 import { createGlobalStyle } from "styled-components";
-import { BreakpointSizes, breakAt } from "./Breakpoints";
 import { Helmet } from "react-helmet";
 
+import { BreakpointSizes, breakAt } from "./Breakpoints";
+
 const GlobalStyle = createGlobalStyle`
-  @import url("");
-  
   html {
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 2px;
 
     strong {
-      color: #ffc107;
+      color: ${(props) => props.theme.colors.primary.main};
     }
   }
 

@@ -42,9 +42,11 @@ const Content = styled.div`
     padding-left: 0;
   }
 
-  li::before {
-    content: "\\2713\\0020";
-    color: #ffc107;
+  li {
+    &::before {
+      content: "\\2713\\0020";
+      color: ${(props) => props.theme.colors.primary.main};
+    }
   }
 `;
 

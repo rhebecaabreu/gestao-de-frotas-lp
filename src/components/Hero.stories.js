@@ -3,6 +3,7 @@ import Heading from "../components/Heading";
 import Hero from "../components/Hero";
 import bgTrucks from "stories/assets/frota.png";
 import { text } from "@storybook/addon-knobs";
+import Button from "./Button";
 
 export default {
   title: "Components/Hero",
@@ -29,5 +30,8 @@ export const withList = () => (
       <li>Lorem ipsum</li>
       <li>Lorem ipsum</li>
     </ul>
+    <Button color="primary" variant="outlined">
+      Saiba mais
+    </Button>
   </Hero>
 );
