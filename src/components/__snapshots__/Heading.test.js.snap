@@ -9,7 +9,7 @@ exports[`match snapshot 1`] = `
 .c0 h5,
 .c0 h6 {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
@@ -23,14 +23,14 @@ exports[`match snapshot 1`] = `
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -3px;
   background-color: #ffc107;
-  height: 6px;
+  height: 5px;
   width: 70px;
 }
 
 .c0 h1 {
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 }
 
 <div
