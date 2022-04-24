@@ -1,12 +1,12 @@
 import React from "react";
-import Heading from "../components/Heading";
-import Hero from "../components/Hero";
+import Hero from "./Hero";
 import bgTrucks from "stories/assets/frota.png";
 import { text } from "@storybook/addon-knobs";
-import Button from "./Button";
+import Heading from "components/atoms/Heading";
+import Button from "components/atoms/Button";
 
 export default {
-  title: "Components/Hero",
+  title: "Components/molecules/Hero",
   component: Hero,
 };
 

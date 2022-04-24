@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, render } from "../test-utils";
+import { screen, render } from "../../test-utils";
 import Hero from "./Hero";
 
 test("renders Hero with children", () => {
