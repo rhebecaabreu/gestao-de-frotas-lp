@@ -5,11 +5,11 @@ import Hero from "./Hero";
 test("renders Hero with children", () => {
   render(
     <Hero>
-      <p>Bruno Nardini</p>
+      <p>Gestao de frotas</p>
     </Hero>
   );
 
-  expect(screen.getByText("Bruno Nardini")).toBeInTheDocument();
+  expect(screen.getByText("Gestao de frotas")).toBeInTheDocument();
 });
 
 test("renders image background", () => {
