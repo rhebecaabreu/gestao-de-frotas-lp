@@ -1,6 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
+import { FaCar, FaKey, FaMapMarkedAlt, FaPersonBooth } from "react-icons/fa";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -42,10 +42,7 @@ const Home = () => (
         <Feature icon={<FaMapMarkedAlt />} title="Manutenção sempre em dia">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </Feature>
-        <Feature
-          icon={<FaAccessibleIcon />}
-          title="Treinamento para sua equipe"
-        >
+        <Feature icon={<FaPersonBooth />} title="Treinamento para sua equipe">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </Feature>
       </Grid>

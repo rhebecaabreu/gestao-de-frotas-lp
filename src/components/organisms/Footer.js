@@ -44,69 +44,69 @@ const Footer = () => (
         <div>
           <Heading>
             <h6>Gestão de frotas</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-              magni hic quam. Rerum atque officiis, quisquam dolorum, dolores,
-              reprehenderit sed repellat dolor cumque magnam sit laboriosam
-              nobis sapiente minus! Fuga.
-            </p>
           </Heading>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+            magni hic quam. Rerum atque officiis, quisquam dolorum, dolores,
+            reprehenderit sed repellat dolor cumque magnam sit laboriosam nobis
+            sapiente minus! Fuga.
+          </p>
         </div>
         <div>
           <Heading>
             <h6>Contatos</h6>
-            <p>
-              <IconContainer>
-                <FaPhone />
-              </IconContainer>
-              (12) 12345-6789
-            </p>
-            <p>
-              <IconContainer>
-                <FaBuilding />
-              </IconContainer>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-              magni hic quam.
-            </p>
           </Heading>
+          <p>
+            <IconContainer>
+              <FaPhone />
+            </IconContainer>
+            (12) 12345-6789
+          </p>
+          <p>
+            <IconContainer>
+              <FaBuilding />
+            </IconContainer>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+            magni hic quam.
+          </p>
         </div>
         <div>
           <Heading>
             <h6>Redes sociais</h6>
-            <p>
-              <FooterLink
-                target="_blank"
-                href="https://www.facebook.com/nardiniacademy/"
-              >
-                <IconContainer>
-                  <FaFacebookF />
-                </IconContainer>
-                Facebook
-              </FooterLink>
-            </p>
-            <p>
-              <FooterLink
-                target="_blank"
-                href="https://www.linkedin.com/company/nardini-academy"
-              >
-                <IconContainer>
-                  <FaLinkedinIn />
-                </IconContainer>
-                LinkedIn
-              </FooterLink>
-            </p>
-            <p>
-              <FooterLink
-                target="_blank"
-                href="https://twitter.com/nardiniacademy"
-              >
-                <IconContainer>
-                  <FaTwitter />
-                </IconContainer>
-                Twitter
-              </FooterLink>
-            </p>
           </Heading>
+          <p>
+            <FooterLink
+              target="_blank"
+              href="https://www.facebook.com/nardiniacademy/"
+            >
+              <IconContainer>
+                <FaFacebookF />
+              </IconContainer>
+              Facebook
+            </FooterLink>
+          </p>
+          <p>
+            <FooterLink
+              target="_blank"
+              href="https://www.linkedin.com/company/nardini-academy"
+            >
+              <IconContainer>
+                <FaLinkedinIn />
+              </IconContainer>
+              LinkedIn
+            </FooterLink>
+          </p>
+          <p>
+            <FooterLink
+              target="_blank"
+              href="https://twitter.com/nardiniacademy"
+            >
+              <IconContainer>
+                <FaTwitter />
+              </IconContainer>
+              Twitter
+            </FooterLink>
+          </p>
         </div>
       </Grid>
     </Container>
