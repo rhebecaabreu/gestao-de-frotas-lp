@@ -9,9 +9,45 @@ import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
+import ProductGrid from "components/organisms/ProductGrid";
 
 import HeroImage from "assets/gestao-de-frota.jpg";
 import AboutVideo from "assets/about.mp4";
+
+import PlaceholderImage from "stories/assets/frota-tunel.jpg";
+
+const products = [
+  {
+    id: 1,
+    title: "1ª Habilitação Carro e Moto",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: PlaceholderImage,
+  },
+  {
+    id: 2,
+    title: "1ª Habilitação Carro",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: PlaceholderImage,
+  },
+  {
+    id: 3,
+    title: "1ª Habilitação Moto",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: PlaceholderImage,
+  },
+  {
+    id: 4,
+    title: "Mudança de Categoria Caminhão",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: PlaceholderImage,
+  },
+  {
+    id: 5,
+    title: "Aulas Avulsas",
+    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: PlaceholderImage,
+  },
+];
 
 const Home = () => (
   <>
@@ -51,6 +87,7 @@ const Home = () => (
       <Heading>
         <h2>Conheça nossos serviços</h2>
       </Heading>
+      <ProductGrid products={products} />
     </Section>
     <Section>
       <Grid md={2}>
