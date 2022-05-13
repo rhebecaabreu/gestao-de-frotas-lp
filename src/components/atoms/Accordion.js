@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 
@@ -8,6 +8,20 @@ const Root = styled.div`
   border: 1px solid #e0e0e0;
   border-left: 5px solid ${(props) => props.theme.colors.primary.main};
   background-color: #fff;
+
+  ${(props) =>
+    props.open &&
+    css`
+      margin: 16px 0;
+    `};
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Head = styled.div`
@@ -30,15 +44,22 @@ const Body = styled.div`
   padding: 0 16px 16px 16px;
 `;
 
-const Accordion = ({ title, children }) => {
-  const [open, setOpen] = useState(false);
+const Accordion = ({ title, open: groupOpen, onChange, children }) => {
+  const [internOpen, setOpen] = useState(false);
+  const isControlled = groupOpen !== undefined;
+  const open = isControlled ? groupOpen : internOpen;
 
   const handleClick = () => {
-    setOpen(!open);
+    const newState = !open;
+    if (isControlled) {
+      onChange(newState);
+    } else {
+      setOpen(newState);
+    }
   };
 
   return (
-    <Root>
+    <Root open={open}>
       <Head role="button" onClick={handleClick}>
         <h6>{title}</h6>
         {open ? <MdExpandLess /> : <MdExpandMore />}
@@ -50,10 +71,16 @@ const Accordion = ({ title, children }) => {
 
 Accordion.defaultProps = {
   title: undefined,
+  children: undefined,
+  open: undefined,
+  onChange: undefined,
 };
 
 Accordion.propTypes = {
   title: PropTypes.string,
+  children: PropTypes.node,
+  open: PropTypes.bool,
+  onChange: PropTypes.func,
 };
 
 export default Accordion;

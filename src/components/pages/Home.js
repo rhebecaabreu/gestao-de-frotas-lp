@@ -10,6 +10,8 @@ import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
+import Accordion from "components/atoms/Accordion";
+import AccordionGroup from "components/atoms/AccordionGroup";
 
 import HeroImage from "assets/gestao-de-frota.jpg";
 import AboutVideo from "assets/about.mp4";
@@ -114,6 +116,26 @@ const Home = () => (
       <Heading>
         <h2>Dúvidas recorrentes</h2>
       </Heading>
+      <AccordionGroup>
+        <Accordion title="O que é gestão de frotas?">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+          consectetur debitis aut harum nesciunt officiis ex. Molestiae nihil
+          repellat ipsum possimus reprehenderit fugiat cumque deleniti, debitis
+          excepturi saepe iusto tempore.
+        </Accordion>
+        <Accordion title="Para que serve a gestão de frotas?">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+          consectetur debitis aut harum nesciunt officiis ex. Molestiae nihil
+          repellat ipsum possimus reprehenderit fugiat cumque deleniti, debitis
+          excepturi saepe iusto tempore.
+        </Accordion>
+        <Accordion title="Qual a vantagem de um sistema de gestão de frotas?">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+          consectetur debitis aut harum nesciunt officiis ex. Molestiae nihil
+          repellat ipsum possimus reprehenderit fugiat cumque deleniti, debitis
+          excepturi saepe iusto tempore.
+        </Accordion>
+      </AccordionGroup>
     </Section>
     <Footer />
   </>
