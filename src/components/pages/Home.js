@@ -10,8 +10,7 @@ import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
-import Accordion from "components/atoms/Accordion";
-import AccordionGroup from "components/atoms/AccordionGroup";
+import Accordion, { AccordionGroup } from "components/atoms/Accordion";
 
 import HeroImage from "assets/gestao-de-frota.jpg";
 import AboutVideo from "assets/about.mp4";
@@ -21,31 +20,31 @@ import PlaceholderImage from "stories/assets/frota-tunel.jpg";
 const products = [
   {
     id: 1,
-    title: "1ª Habilitação Carro e Moto",
+    title: "Monitoramento de frotas",
     summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     image: PlaceholderImage,
   },
   {
     id: 2,
-    title: "1ª Habilitação Carro",
+    title: "Relatórios completos",
     summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     image: PlaceholderImage,
   },
   {
     id: 3,
-    title: "1ª Habilitação Moto",
+    title: "Controle de rotas, paradas e abastecimentos",
     summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     image: PlaceholderImage,
   },
   {
     id: 4,
-    title: "Mudança de Categoria Caminhão",
+    title: "Controle de checklists por veículo",
     summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     image: PlaceholderImage,
   },
   {
     id: 5,
-    title: "Aulas Avulsas",
+    title: "Cronograma de manutenção",
     summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     image: PlaceholderImage,
   },
@@ -66,7 +65,7 @@ const Home = () => (
         <li>Lorem ipsum</li>
       </ul>
       <Button color="primary" variant="outlined">
-        Saiba mais
+        Comece agora
       </Button>
     </Hero>
     <Section>

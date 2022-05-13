@@ -3,6 +3,6 @@ import App from "./App";
 
 test("renders call to action", () => {
   render(<App />);
-  const linkElement = screen.getAllByText(/saiba mais/i);
-  expect(linkElement).toHaveLength(2);
+  const linkElement = screen.getAllByText(/comece agora/i);
+  expect(linkElement).toHaveLength(1);
 });

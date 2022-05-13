@@ -51,11 +51,11 @@ const Accordion = ({ title, open: groupOpen, onChange, children }) => {
 
   const handleClick = () => {
     const newState = !open;
-    if (isControlled) {
-      onChange(newState);
-    } else {
+    if (!isControlled) {
       setOpen(newState);
     }
+
+    onChange(newState);
   };
 
   return (
@@ -73,7 +73,7 @@ Accordion.defaultProps = {
   title: undefined,
   children: undefined,
   open: undefined,
-  onChange: undefined,
+  onChange: () => {},
 };
 
 Accordion.propTypes = {
