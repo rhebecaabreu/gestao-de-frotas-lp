@@ -29,6 +29,7 @@ jobs:
       - run:
           name: check package version
           command: node scripts/check-version.js rhebecaabreu gestao-de-frotas-lp
+
 workflows:
   ci:
     jobs:
