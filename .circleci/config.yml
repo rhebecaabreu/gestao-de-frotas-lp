@@ -23,7 +23,7 @@ jobs:
           file: coverage/*.json
   versioning:
     docker:
-      - image: "cimg/base:stable"
+      - image: cimg/node:18.3.0
     steps:
       - checkout
       - run:
