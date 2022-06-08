@@ -21,8 +21,21 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
-
+  versioning:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - checkout
+      - run:
+          name: check package version
+          command: node scripts/check-version.js rhebecaabreu gestao-de-frotas-lp
 workflows:
   ci:
     jobs:
       - tests
+      - versioning:
+          filters:
+            branches:
+              ignore: master
+            tags:
+              ignore: /.*/
