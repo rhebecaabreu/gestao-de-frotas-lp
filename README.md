@@ -1,6 +1,7 @@
 # Gestão de frotas
 
 ![CircleCI](https://img.shields.io/circleci/build/github/rhebecaabreu/gestao-de-frotas-lp)
+![Codecov](https://img.shields.io/codecov/c/github/rhebecaabreu/gestao-de-frotas-lp)
 
 Projeto construído durante o curso de React Profissional - Bruno Nardini https://nardiniacademy.com/
 
