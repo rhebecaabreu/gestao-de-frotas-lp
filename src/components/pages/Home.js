@@ -55,8 +55,8 @@ const Home = () => (
     <Hero image={HeroImage}>
       <Heading>
         <h1>
-          Sua frota conectada com <strong> tecnologia </strong> e
-          <strong> eficiência</strong>
+          Sua frota conectada com
+          <strong> tecnologia </strong> e <strong> eficiência</strong>
         </h1>
       </Heading>
       <ul>
@@ -107,7 +107,7 @@ const Home = () => (
           </div>
         </div>
         <div>
-          <video src={AboutVideo} width="100%" autoPlay loop />
+          <video src={AboutVideo} width="100%" autoPlay loop muted />
         </div>
       </Grid>
     </Section>

@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const StyledBody = styled.div`
   padding: 16px;
+  height: 100%;
 
   h6 {
     margin-top: 0;
@@ -31,6 +32,7 @@ const StyledMedia = styled.div`
   background-position: center center;
   background-size: cover;
   height: 270px;
+  margin-bottom: 8px;
 `;
 
 export const CardMedia = ({ image }) => <StyledMedia image={image} />;
@@ -50,6 +52,7 @@ CardMedia.propTypes = {
 const StyledCard = styled.div`
   background-color: #fff;
   border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
   overflow: hidden;
 `;
 
