@@ -23,7 +23,7 @@ jobs:
           file: coverage/*.json
   versioning:
     docker:
-      - image: circleci/node@5.0.2
+      - image: "cimg/base:stable"
     steps:
       - checkout
       - run:
