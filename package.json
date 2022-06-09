@@ -1,6 +1,6 @@
 {
   "name": "gestao-de-frotas-lp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@storybook/addon-docs": "^6.5.7",
@@ -29,7 +29,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "chromatic --project-token=530e32a4fd2c",
+    "chromatic": "chromatic --exit-zero-on-changes --project-token=530e32a4fd2c",
     "lint": "eslint src/**/*.js"
   },
   "eslintConfig": {

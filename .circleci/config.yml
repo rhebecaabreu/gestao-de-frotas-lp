@@ -13,16 +13,40 @@ jobs:
       - node/install:
           install-yarn: true
           node-version: "16.13"
-      - run: node --version
-      - run: yarn --version
+      - run:
+          name: Show node version
+          command: |
+            node --version
+            yarn --version
       - node/install-packages:
           pkg-manager: yarn
-      - run: yarn lint
-      - run: yarn cover
+      - run:
+          name: Run lint check
+          command: yarn lint
+      - run:
+          name: Run unit tests with coverage
+          command: yarn cover
       - codecov/upload:
           file: coverage/*.json
+      - run:
+          name: Publish to Chromatic
+          command: yarn chromatic --project-token=${CHROMATIC_TOKEN}
+  versioning:
+    docker:
+      - image: cimg/node:18.3.0
+    steps:
+      - checkout
+      - run:
+          name: check package version
+          command: node scripts/check-version.js rhebecaabreu gestao-de-frotas-lp
 
 workflows:
   ci:
     jobs:
       - tests
+      - versioning:
+          filters:
+            branches:
+              ignore: master
+            tags:
+              ignore: /.*/
