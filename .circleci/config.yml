@@ -30,7 +30,7 @@ jobs:
           file: coverage/*.json
       - run:
           name: Publish to Chromatic
-          command: yarn chromatic --project-token=${CHROMATIC_TOKEN}
+          command: chromatic --project-token=${CHROMATIC_TOKEN}
   versioning:
     docker:
       - image: cimg/node:18.3.0
