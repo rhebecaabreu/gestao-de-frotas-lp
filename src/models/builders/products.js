@@ -1,5 +1,3 @@
-import faker from "faker";
-
 import CarPlaceholder from "stories/assets/frota-tunel.jpg";
 import products from "./fixtures/products.json";
 

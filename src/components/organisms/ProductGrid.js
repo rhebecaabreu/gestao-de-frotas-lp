@@ -7,6 +7,7 @@ import Card, { CardBody, CardMedia } from "components/atoms/Card";
 import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
 import styled from "styled-components";
+import ProductType from "models/types/ProductType";
 
 const Toolbar = styled.div`
   margin-top: 40px;
@@ -63,14 +64,7 @@ ProductGrid.defaultProps = {
 };
 
 ProductGrid.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      image: PropTypes.string,
-      title: PropTypes.string,
-      summary: PropTypes.string,
-    })
-  ),
+  products: PropTypes.arrayOf(ProductType),
 };
 
 export default ProductGrid;

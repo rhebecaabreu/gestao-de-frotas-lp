@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FaCar, FaKey, FaMapMarkedAlt, FaPersonBooth } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -11,6 +12,7 @@ import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
 import Accordion, { AccordionGroup } from "components/atoms/Accordion";
+import ProductType from "models/types/ProductType";
 
 import HeroImage from "assets/gestao-de-frota.jpg";
 import AboutVideo from "assets/about.mp4";
@@ -107,8 +109,12 @@ const Home = ({ products }) => (
   </>
 );
 
-// Home.defaultProps = {};
+Home.defaultProps = {
+  products: [],
+};
 
-// Home.propTypes = {};
+Home.propTypes = {
+  products: PropTypes.arrayOf(ProductType),
+};
 
 export default Home;
