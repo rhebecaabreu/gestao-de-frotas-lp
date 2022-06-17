@@ -1,10 +1,9 @@
 import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
-import { select } from "@storybook/addon-knobs";
-import { MemoryRouter as Router } from "react-router-dom";
-
 import GlobalStyle from "../src/styles/GlobalStyle";
 import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
+import { select } from "@storybook/addon-knobs";
+import { MemoryRouter as Router } from "react-router-dom";
 
 addDecorator((storyFn) => (
   <Router>
@@ -58,3 +57,13 @@ addParameters({
     viewports,
   },
 });
+
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+};
