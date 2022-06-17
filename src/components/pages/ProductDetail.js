@@ -12,6 +12,7 @@ import Callout, {
 } from "components/atoms/Callout";
 import Button from "components/atoms/Button";
 import GraphImage from "assets/draws/Graph";
+import BreadCrumb from "components/atoms/BreadCrumb";
 
 import HeroImage from "assets/gestao-de-frota.jpg";
 import Footer from "components/organisms/Footer";
@@ -34,12 +35,19 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = () => (
+const ProductDetail = ({ product }) => (
   <>
     <Hero image={HeroImage}>
       <Heading>
-        <h1>Nome do serviço</h1>
+        <h1>{product.title}</h1>
       </Heading>
+      <BreadCrumb
+        items={[
+          { label: "Início", link: "/" },
+          { label: "Serviços" },
+          { label: product.title },
+        ]}
+      />
     </Hero>
     <Section>
       <div>

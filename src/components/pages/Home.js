@@ -1,6 +1,6 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import { FaCar, FaKey, FaMapMarkedAlt, FaPersonBooth } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -15,42 +15,7 @@ import Accordion, { AccordionGroup } from "components/atoms/Accordion";
 import HeroImage from "assets/gestao-de-frota.jpg";
 import AboutVideo from "assets/about.mp4";
 
-import PlaceholderImage from "stories/assets/frota-tunel.jpg";
-
-const products = [
-  {
-    id: 1,
-    title: "Monitoramento de frotas",
-    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: PlaceholderImage,
-  },
-  {
-    id: 2,
-    title: "Relatórios completos",
-    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: PlaceholderImage,
-  },
-  {
-    id: 3,
-    title: "Controle de rotas, paradas e abastecimentos",
-    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: PlaceholderImage,
-  },
-  {
-    id: 4,
-    title: "Controle de checklists por veículo",
-    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: PlaceholderImage,
-  },
-  {
-    id: 5,
-    title: "Cronograma de manutenção",
-    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: PlaceholderImage,
-  },
-];
-
-const Home = () => (
+const Home = ({ products }) => (
   <>
     <Hero image={HeroImage}>
       <Heading>
@@ -103,7 +68,9 @@ const Home = () => (
             voluptatibus.
           </p>
           <div>
-            <Button color="primary">Saiba mais</Button>
+            <Button as={Link} to="/sobre" color="primary">
+              Saiba mais
+            </Button>
           </div>
         </div>
         <div>

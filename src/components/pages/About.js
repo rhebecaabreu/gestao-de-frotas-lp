@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
 import Card, { CardMedia, CardMediaDescription } from "components/atoms/Card";
+import BreadCrumb from "components/atoms/BreadCrumb";
 
 import HeroImage from "assets/gestao-de-frota.jpg";
 import AboutImage from "assets/draws/About";
@@ -37,6 +37,9 @@ const About = () => (
       <Heading>
         <h1>Gestão de Frotas</h1>
       </Heading>
+      <BreadCrumb
+        items={[{ label: "Início", link: "/" }, { label: "Sobre" }]}
+      />
     </Hero>
 
     <Section>

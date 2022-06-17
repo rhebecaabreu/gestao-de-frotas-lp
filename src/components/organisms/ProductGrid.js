@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import Grid from "components/atoms/Grid";
 import Card, { CardBody, CardMedia } from "components/atoms/Card";
@@ -28,7 +29,12 @@ const ProductGrid = ({ products }) => {
               </Heading>
               <p>{product.summary}</p>
               <div>
-                <Button color="primary" variant="link">
+                <Button
+                  color="primary"
+                  variant="link"
+                  as={Link}
+                  to={`/servicos/${product.slang}`}
+                >
                   Saiba mais
                 </Button>
               </div>
