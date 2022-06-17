@@ -6,10 +6,12 @@ import { select } from "@storybook/addon-knobs";
 import { MemoryRouter as Router } from "react-router-dom";
 
 addDecorator((storyFn) => (
-  <ThemeProvider theme={select("Theme", ThemeNames, ThemeNames.light)}>
-    <GlobalStyle />
-    {storyFn()}
-  </ThemeProvider>
+  <Router>
+    <ThemeProvider theme={select("Theme", ThemeNames, ThemeNames.light)}>
+      <GlobalStyle />
+      {storyFn()}
+    </ThemeProvider>
+  </Router>
 ));
 
 const viewports = {
