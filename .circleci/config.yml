@@ -52,7 +52,7 @@ jobs:
 workflows:
   ci:
     jobs:
-      - chromatic
+      # - chromatic
       - tests
       - versioning:
           filters:
