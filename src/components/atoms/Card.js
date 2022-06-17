@@ -41,12 +41,12 @@ export const CardMedia = ({ image, children }) => (
 
 CardMedia.defaultProps = {
   image: undefined,
-  children: undefined
+  children: undefined,
 };
 
 CardMedia.propTypes = {
   image: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 //#endregion
@@ -60,7 +60,12 @@ const StyledMediaDescription = styled.div`
   align-self: flex-end;
   flex: 1;
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 0;
   }
 `;
@@ -84,7 +89,7 @@ CardMediaDescription.propTypes = {
 const StyledCard = styled.div`
   background-color: #fff;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid ${(props) => props.theme.colors.border};
   overflow: hidden;
 `;
 
