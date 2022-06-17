@@ -5,3 +5,5 @@
 import "@testing-library/jest-dom";
 import "jest-styled-components";
 import "test-utils";
+
+window.scrollTo = jest.fn();

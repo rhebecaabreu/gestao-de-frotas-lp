@@ -1,16 +1,17 @@
 import React from "react";
-import { addDecorator, addParameters } from "@storybook/react";
+import { addDecorator } from "@storybook/react";
 import GlobalStyle from "../src/styles/GlobalStyle";
 import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
 import { select } from "@storybook/addon-knobs";
+import { MemoryRouter as Router } from "react-router-dom";
 
 addDecorator((storyFn) => (
-  <>
+  <Router>
     <ThemeProvider theme={select("Theme", ThemeNames, ThemeNames.light)}>
       <GlobalStyle />
       {storyFn()}
     </ThemeProvider>
-  </>
+  </Router>
 ));
 
 const viewports = {
@@ -51,14 +52,12 @@ const viewports = {
   },
 };
 
-addParameters({
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  layout: "fullscreen",
   viewport: {
     viewports,
   },
-});
-
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
