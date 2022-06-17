@@ -1,4 +1,3 @@
-import Section from "components/molecules/Section";
 import React from "react";
 
 import BreadCrumb from "./BreadCrumb";
