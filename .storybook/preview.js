@@ -52,14 +52,12 @@ const viewports = {
   },
 };
 
-addParameters({
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  layout: "fullscreen",
   viewport: {
     viewports,
   },
-});
-
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
