@@ -1,6 +1,10 @@
 {
   "name": "gestao-de-frotas-lp",
+<<<<<<< HEAD
   "version": "0.1.2",
+=======
+  "version": "0.3.0",
+>>>>>>> 7f4a916 (Fix package.json)
   "private": true,
   "dependencies": {
     "@storybook/addon-actions": "^6.5.9",
@@ -34,7 +38,12 @@
     "styled-components": "^5.3.5",
     "test-utils": "^1.1.1",
     "web-vitals": "^2.1.4",
+<<<<<<< HEAD
     "webpack": "5"
+=======
+    "webpack": "5",
+    "chromatic": "^6.6.2"
+>>>>>>> 7f4a916 (Fix package.json)
   },
   "scripts": {
     "start": "react-scripts start",
@@ -84,8 +93,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "chromatic": "^6.6.2"
+=======
+>>>>>>> 7f4a916 (Fix package.json)
   }
 }
