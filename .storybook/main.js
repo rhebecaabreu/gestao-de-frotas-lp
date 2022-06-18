@@ -5,10 +5,9 @@ module.exports = {
     "../src/styles/**/*.stories.@(js|mdx)",
   ],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
     "@storybook/preset-create-react-app",
+    "@storybook/addon-actions",
+    "@storybook/addon-links",
     "@storybook/addon-viewport",
     {
       name: "@storybook/addon-docs",
@@ -18,8 +17,4 @@ module.exports = {
     },
     "@storybook/addon-knobs",
   ],
-  framework: "@storybook/react",
-  core: {
-    builder: "webpack5",
-  },
 };

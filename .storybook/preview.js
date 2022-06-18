@@ -1,9 +1,10 @@
 import React from "react";
-import { addDecorator } from "@storybook/react";
-import GlobalStyle from "../src/styles/GlobalStyle";
-import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
+import { addDecorator, addParameters } from "@storybook/react";
 import { select } from "@storybook/addon-knobs";
 import { MemoryRouter as Router } from "react-router-dom";
+
+import GlobalStyle from "../src/styles/GlobalStyle";
+import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
 
 addDecorator((storyFn) => (
   <Router>
@@ -52,16 +53,8 @@ const viewports = {
   },
 };
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  layout: "fullscreen",
+addParameters({
   viewport: {
     viewports,
   },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-};
+});
