@@ -30,7 +30,7 @@ jobs:
           file: coverage/*.json
   versioning:
     docker:
-      - image: cimg/node:18.3.0
+      - image: cimg/node:16.15.1
     steps:
       - checkout
       - run:
@@ -38,7 +38,7 @@ jobs:
           command: node scripts/check-version.js rhebecaabreu gestao-de-frotas-lp
   chromatic:
     docker:
-      - image: cimg/node:18.3.0
+      - image: cimg/node:16.15.1
     working_directory: ~/repo
     steps:
       - checkout
